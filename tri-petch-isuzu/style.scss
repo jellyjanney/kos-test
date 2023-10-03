@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+$color_1: #5E3DB3 !default;
+$color_2: #F5F4F9 !default;
+$color_3: #090C35 !default;
+$color_white: #FFFFFF !default;
+
+$font_fam: 'Roboto', sans-serif !default;
+$font_body_size: 20px !default;
+$font_body_color: #000000 !default;
+$font_body_lh: 1.4 !default;
+
+$font_number_size: 18px;
+$font_number_lh: 1.2;
+$font_number_color: #C2C2C2;
+
+$font_title_size: 36px;
+$font_title_color: #C2C2C2;
+$font_title_lh: 2;
+
+$font_header_size: 90px;
+$font_header_color: #E7E7E7;
+$font_header_lh: 1.17;
+
+$breakpoints: (
+        'mobile': (max-width: 599.99px),
+        'tablet': (max-width: 1279.99px),
+        'destop': (min-width: 1280px),
+        ) !default;
+
+
+body {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        background-color: $color_white;
+        overflow: auto;
+
+        font: {
+                family: $font_fam;
+                size: $font_body_size;
+                weight: 400;
+        }
+
+        ;
+        line-height: $font_body_lh;
+        color: $font_body_color;
+}
+
+h2 {
+        font: {
+                size: $font_header_size;
+                weight: 400;
+        }
+
+        ;
+        line-height: $font_header_lh;
+        color: $font_header_color;
+        margin: 0 0 59px;
+}
+
+h3 {
+        font: {
+                size: $font_title_size;
+                weight: 400;
+        }
+
+        ;
+
+        line-height: $font_title_lh;
+        color: $font_title_color;
+        letter-spacing: 1.5px;
+        margin: 0;
+}
+
+p {
+        font: {
+                size: $font_body_size;
+                weight: 400;
+        }
+
+        ;
+        line-height: $font_body_lh;
+        color: $font_body_color;
+        margin: 0;
+}
+
+img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+}
+
+ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        counter-reset: section;
+
+        & > li {
+                display: block;
+                width: 100%;
+                height: auto;
+                padding: 53px 0;
+                position: relative;
+                z-index: 1;
+
+                h3 {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left: 30px;
+
+                        &::after {
+                                counter-increment: section;
+                                content: "0" counter(section
+                                );
+                        display: inline-flex;
+                        color: $font_body_color;
+
+                        font: {
+                                size: 18px;
+                                weight: 400;
+                        }
+
+                        ;
+                        letter-spacing: 1.5px;
+                        position: absolute;
+                        top: 15%;
+                        left: 0;
+                }
+
+                &::before {
+                        content: " ";
+                        display: inline-flex;
+                        width: 19px;
+                        height: 5px;
+
+                        border: {
+                                radius: 2.5px;
+                        }
+
+                        ;
+                        background-color: $color_1;
+                        position: absolute;
+                        bottom: 35%;
+                        left: 0;
+                }
+
+        }
+
+        &::before {
+                content: "";
+                display: block;
+                min-width: 100%;
+                height: 100%;
+                background-color: $color_white;
+                position: absolute;
+                top: 0;
+                left: -150%;
+                right: -150%;
+                z-index: -1;
+        }
+
+        &:last-child {
+                p {
+                        color: $color_white;
+                }
+
+                h3 {
+                        &::before {
+                                background-color: $color_white;
+                        }
+                }
+
+                &::before {
+                        background-color: $color_1;
+                }
+        }
+
+        &:nth-last-child(2) {
+
+                &::before {
+                        background-color: $color_2;
+                }
+        }
+
+}
+}
+
+section {
+        position: relative;
+        z-index: 1;
+
+        .figure {
+                padding: 35px 0 0;
+                z-index: 2;
+
+                margin: {
+                        bottom: -25px;
+                }
+
+                ;
+        }
+
+        .flex-md-row-reverse {
+                .figure {
+                        margin: 0;
+
+                        img {
+                                transform: scale(1.25);
+                        }
+                }
+
+                ul {
+                        & > li {
+                                &:last-child {
+                                        &::before {
+                                                background-color: $color_3;
+                                        }
+
+                                        h3 {
+                                                &::after {
+                                                        color: $color_1;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}

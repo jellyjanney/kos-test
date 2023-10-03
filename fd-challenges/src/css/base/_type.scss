@@ -1,0 +1,95 @@
+%heading {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0.25rem;
+    width: 100%;
+    line-height: 2;
+}
+
+h1 {
+    @extend %heading;
+
+    font: {
+        family: 'Header';
+        size: $h1-font-size;
+    }
+
+    color: $color_title;
+}
+
+h2 {
+    @extend %heading;
+
+    font: {
+        family: 'title';
+        size: $h2-font-size;
+    }
+
+    color: $color_white;
+}
+
+h3 {
+    @extend %heading;
+
+    font: {
+        family: 'title-700';
+        size: $h3-font-size;
+    }
+
+    letter-spacing: 1px;
+    color: $third;
+}
+
+h4 {
+    @extend %heading;
+
+    font: {
+        family: 'title-400';
+        size: $h4-font-size;
+    }
+
+    color: $color_title;
+}
+
+h5 {
+    @extend %heading;
+
+    font: {
+        family: 'title-600';
+        size: $h5-font-size;
+    }
+}
+
+h6 {
+    @extend %heading;
+
+    font: {
+        family: 'text-SemiBold';
+        size: $h6-font-size;
+    }
+
+    letter-spacing: 1.25px;
+    color: $primary;
+}
+
+p {
+    font: {
+        family: $font_text;
+        size: $font_size-base;
+        weight: 400;
+    }
+
+    ;
+    color: $color_text;
+}
+
+small {
+    font: {
+        family: $font_text;
+        size: $small-font-size;
+        weight: 400;
+    }
+
+    ;
+    color: $color_text;
+}

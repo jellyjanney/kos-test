@@ -1,0 +1,60 @@
+// Variable for My Portfolio
+$color_dark: #322D29 !default;
+$color_red: #72383D !default;
+$color_caramel: #AC9C8D !default;
+$color_cream: #D1C7BD !default;
+$color_gray-light: #D9D9D9 !default;
+$color_light: #EFE9E1 !default;
+$color_black: #000000 !default;
+$color_white: #ffffff !default;
+
+
+$color_title: $color_white !default;
+$color_blue: #304f6d !default;
+$color_green: #899481 !default;
+$color_orange: #e07d54 !default;
+$color_yellow: #ffe1a0 !default;
+$color_skylight: #e2f3fd !default;
+$color_gray: #e6e1dd !default;
+
+$primary: #FFC03D !default;
+$secondary: #432344 !default;
+$third: #FF2525 !default;
+$color_text: #E7EEFB !default;
+
+
+$font_header: 'Chonburi' !default;
+$font_title: 'Noto Sans Thai' !default;
+$font_text: 'Bai Jamjuree' !default;
+
+$font_size-base: 16px !default;
+$h1-font-size: $font_size-base * 3 !default;
+$h2-font-size: $font_size-base * 2 !default;
+$h3-font-size: $font_size-base * 1.75 !default;
+$h4-font-size: $font_size-base * 1.5 !default;
+$h5-font-size: $font_size-base * 1.25 !default;
+$h6-font-size: $font_size-base * 1 !default;
+$small-font-size: $font_size-base * 0.8 !default;
+
+
+$border: 1px solid $color_light;
+$border_color: $color_light;
+$border_radius: 1rem;
+
+$radius-circle: 100%;
+$radius-round: 50px;
+$radius-pill: 25px;
+$rounded-1: 0.25rem;
+$rounded-2: 0.5rem;
+$rounded-3: 1rem;
+$rounded-4: 1.25rem;
+$rounded-5: 1.5rem;
+
+$padding-base: 30px;
+$padding: 1rem;
+$padding-xy: 0.25rem 1.5rem;
+
+$margin-base: 32px auto;
+$margin: 1rem;
+
+$zindex-menu: 1090;

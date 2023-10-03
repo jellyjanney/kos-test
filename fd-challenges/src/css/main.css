@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Chonburi&family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  color: #000000;
+  background-color: #EFE9E1;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+body.dark-mode {
+  color: #EFE9E1 !important;
+  background-color: #000000 !important;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.25rem;
+  width: 100%;
+  line-height: 2;
+}
+
+h1 {
+  font-family: "Header";
+  font-size: 48px;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "title";
+  font-size: 32px;
+  color: #ffffff;
+}
+
+h3 {
+  font-family: "title-700";
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #FF2525;
+}
+
+h4 {
+  font-family: "title-400";
+  font-size: 24px;
+  color: #ffffff;
+}
+
+h5 {
+  font-family: "title-600";
+  font-size: 20px;
+}
+
+h6 {
+  font-family: "text-SemiBold";
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  color: #FFC03D;
+}
+
+p {
+  font-family: "Bai Jamjuree";
+  font-size: 16px;
+  font-weight: 400;
+  color: #E7EEFB;
+}
+
+small {
+  font-family: "Bai Jamjuree";
+  font-size: 12.8px;
+  font-weight: 400;
+  color: #E7EEFB;
+}
+
+.slide {
+  display: flex;
+  flex: 0 0 100%;
+  width: 100%;
+  gap: 12px;
+  margin: 0 0 16px;
+  padding: 0 16px;
+  list-style: none;
+}
+.slide-items {
+  display: inline-flex;
+  width: 100%;
+  max-width: 16.6666666667%;
+  gap: 8px;
+  background-color: #322D29;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.slide-items figure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  margin: 0;
+}
+.slide-items figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+.slide-items figure figcaption {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+.slide-items figure figcaption h4 {
+  font-family: "Noto Sans Thai";
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.slide-items figure figcaption p {
+  font-family: "Bai Jamjuree";
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.slide-items figure figcaption .meta-port {
+  display: flex;
+  width: 100%;
+  margin: 16px 0 0;
+  padding: 0;
+  gap: 4px;
+}
+.slide-items figure figcaption .meta-port label {
+  font-size: 12.8px;
+  color: #ffffff;
+  border: 1px solid #d69100;
+  border-radius: 25px;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  background: linear-gradient(0deg, #FFC03D 0%, #d69100 100%);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-height: unset;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1090;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: visible;
+  border-bottom: 1px solid #D9D9D9;
+}
+header nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .brand {
+  background-color: transparent;
+  border: none;
+  height: 80px;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+header .brand-logo {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+header .menu {
+  padding: 0;
+  margin: 1rem 0;
+  width: auto;
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .menu-list {
+  margin: 0 0.5rem;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3ms ease-in-out;
+  overflow: visible;
+  position: relative;
+}
+header .menu-list__btn {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e6e1dd;
+  text-shadow: 0px 0px 8px #322D29;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.3ms ease;
+  background-color: transparent;
+  border-radius: 25px;
+  min-width: 52px;
+  height: 52px;
+  border: 0 solid;
+  padding: 1rem;
+  transition: all 0.3ms ease-in-out;
+  opacity: 1;
+}
+header .menu-list__btn svg {
+  width: 100%;
+  height: 100%;
+}
+header .menu-list__btn::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #FFC03D;
+  border-radius: 100%;
+  display: none;
+  margin: 0.5rem auto 0;
+  box-shadow: 0px 0px 8px #322D29;
+}
+header .menu-list:hover .menu-list__btn {
+  opacity: 1;
+}
+header .menu-list:hover .menu-list__btn * {
+  color: #ffffff;
+}
+header .menu-list:hover .menu-list__btn::after {
+  display: flex;
+}
+header .menu-list.active .menu-list__btn {
+  opacity: 1;
+}
+header .menu-list.active .menu-list__btn * {
+  color: #ffffff;
+}
+header .menu-list.active .menu-list__btn::after {
+  display: flex;
+}
+header .menu-list.active:hover .menu-list__btn::after {
+  display: flex;
+  background-color: #FFC03D;
+}
+header .menu-right {
+  padding: 0;
+  margin: 1rem 0;
+  width: auto;
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .menu-right__btn {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e6e1dd;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.3ms ease;
+  background-color: transparent;
+  border-radius: 25px;
+  min-width: 52px;
+  height: 52px;
+  border: 0 solid;
+  padding: 1rem;
+  transition: all 0.3ms ease-in-out;
+  opacity: 1;
+}
+header .menu-right__btn svg {
+  width: 100%;
+  height: 100%;
+}
+header .menu-right__list {
+  margin: 0 0.5rem;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3ms ease-in-out;
+  overflow: visible;
+  position: relative;
+}
+header .menu-right__list:hover .menu-right__btn {
+  opacity: 1;
+}
+header .menu-right__list.show {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+header .menu-right__list.show .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  border-radius: 0;
+  margin-top: 2rem;
+}
+header .menu-right__list.show .dropdown-menu::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  margin-left: auto;
+  margin-right: 0;
+  transform: translate(-50%, -100%);
+  border-bottom: 16px solid rgba(0, 0, 0, 0.5);
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+header .menu-right__list.show .dropdown-menu.show {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+header .menu-right__list.show .dropdown-menu > li {
+  padding: 0;
+  margin: 0;
+}
+header .menu-right__list.show .dropdown-menu > li:not(:first-child) {
+  border-top: 2px solid #72383D;
+}
+header .menu-right__list.show .dropdown-item {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: #e6e1dd;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  transition: all 0.3ms ease;
+}
+header .menu-right__list.show .dropdown-item:hover, header .menu-right__list.show .dropdown-item:active, header .menu-right__list.show .dropdown-item:focus {
+  color: white;
+  background-color: unset;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 12.8px;
+}
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 16px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.footer-copyright img {
+  width: 32px;
+  height: 32px;
+}
+.footer-copyright a {
+  filter: brightness(100);
+  display: inline-flex;
+  color: #e6e1dd;
+  opacity: 0.8;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  margin: 0 0 0 0.5rem;
+}
+.footer-copyright a:hover {
+  filter: unset;
+  opacity: 1;
+  color: #FFC03D;
+}
+
+#home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+}
+#home .row {
+  min-width: 1140px;
+  width: 100%;
+  height: auto;
+  border: 0 solid #000000;
+  border-radius: 0;
+  background-color: rgba(172, 156, 141, 0);
+  padding: 0;
+  box-shadow: 0px 0 0 rgba(172, 156, 141, 0.5);
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#home .hero {
+  min-width: 100%;
+  width: 100%;
+  height: 100vh;
+  border: 0 solid #000000;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+#home .hero::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 35%;
+  background: transparent linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#home .hero img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+#home .hero figcaption {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  align-content: flex-end;
+  padding: 2rem 32px 6rem;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#home .hero figcaption .caption {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 8px 0;
+}
+#home .hero figcaption .caption--title {
+  font-family: "Noto Sans Thai";
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  backdrop-filter: drop-shadow(0px 0px 16px #000000);
+  text-shadow: 0px 0px 16px #322D29;
+  margin-bottom: 16px;
+}
+#home .hero figcaption .caption--subtitle, #home .hero figcaption .caption--subtitle__introduct > li {
+  font-family: "Noto Sans Thai";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 0 4px;
+  backdrop-filter: drop-shadow(0px 0px 16px #000000);
+  text-shadow: 0px 0px 16px #322D29;
+}
+#home .hero figcaption .caption--subtitle__introduct {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  backdrop-filter: drop-shadow(0px 0px 16px #000000);
+  text-shadow: 0px 0px 16px #322D29;
+}
+#home .hero figcaption .caption--subtitle__introduct > li {
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 400;
+  width: auto;
+  margin: 0 0 0 0.25rem;
+  align-items: center;
+}
+#home .hero figcaption .caption--subtitle__introduct > li:not(:first-child)::before {
+  content: "";
+  display: inline-flex;
+  margin: 0 0.5rem;
+  width: 6px;
+  height: 6px;
+  background-color: #EFE9E1;
+  border-radius: 100%;
+}
+#home .hero figcaption .caption--detail {
+  font-family: "Bai Jamjuree";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #e6e1dd;
+  width: 80%;
+  padding: 4px 0 2px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#home .hero figcaption .caption__social {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+#home .hero figcaption .caption__social-list {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 0.25rem;
+}
+#home .hero figcaption .caption__social-list__btn, #home .hero figcaption .caption__social-list__btn--primary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  min-width: 150px;
+  height: 52px;
+  border: 0 solid;
+  background-color: #000000;
+  border-color: #000000;
+  border-radius: 50px;
+  padding: 0.925rem 1.5rem;
+  color: #ffffff;
+  transition: all 0.1s ease;
+}
+#home .hero figcaption .caption__social-list__btn svg, #home .hero figcaption .caption__social-list__btn--primary svg {
+  width: "Bai Jamjuree";
+  height: "Bai Jamjuree";
+  margin-right: 0.5rem;
+}
+#home .hero figcaption .caption__social-list__btn--primary {
+  background: linear-gradient(0deg, #FFC03D 0%, #d69100 100%);
+  border-color: #72383D;
+}
+#home .hero figcaption .caption__social-list__btn--primary:hover, #home .hero figcaption .caption__social-list__btn--primary:active, #home .hero figcaption .caption__social-list__btn--primary:focus {
+  background: #3d2900 !important;
+  border-color: #3d2900 !important;
+}
+#home .hero figcaption .caption__social-list:first-child {
+  margin-left: 0;
+}
+#home .hero figcaption .caption__social-list:last-child {
+  margin-right: 0;
+}
+#home .hero figcaption .caption__social-list:hover .caption__social-list__btn, #home .hero figcaption .caption__social-list:hover .caption__social-list__btn--primary {
+  background-color: #FFC03D;
+  border-color: #FFC03D;
+  color: #ffffff;
+}
+#home .title {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 16px 0;
+  align-items: center;
+}
+#home .title::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 32px;
+  background-color: #ffffff;
+  margin: 0 1.5rem;
+}/*# sourceMappingURL=main.css.map */

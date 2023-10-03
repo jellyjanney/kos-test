@@ -1,0 +1,43 @@
+.footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding: 1rem 2rem;
+        justify-content: center;
+        align-items: center;
+        font-size: $small-font-size;
+
+        &-copyright {
+                color: transparentize($color: $color_white, $amount: 0.35);
+                font-size: $h6-font-size;
+                display: flex;
+                align-content: center;
+                align-items: center;
+
+                img {
+                        $width: 32px;
+
+
+                        width: $width;
+                        height: $width;
+                }
+
+                a {
+                        filter: brightness(100);
+                        display: inline-flex;
+                        color: $color_gray;
+                        opacity: 0.8;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: all 0.1s ease;
+                        margin: 0 0 0 .5rem;
+
+                        &:hover {
+                                filter: unset;
+                                opacity: 1;
+                                color: $primary;
+                        }
+                }
+        }
+}

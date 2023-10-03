@@ -1,0 +1,65 @@
+{
+  "User": [
+    {
+      "codeId": "1174",
+      "firstName": "Darunee",
+      "lastName": "Praditwong",
+      "position": "Frontend developer",
+      "introduct": "Exprience in frontend development and design responsive website with HTML, CSS, JavaScript and jQuery language on Bootstrap, PHP and Yii2 Framework",
+      "thumbnail": "/images/icon/favicon.jpg"
+    }
+  ],
+  "Skills": [
+    {
+      "id": 1,
+      "title": "HTML",
+      "howlong": "5 years"
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "howlong": "5 years"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript",
+      "howlong": "4 years"
+    },
+    {
+      "id": 4,
+      "title": "jQuery",
+      "howlong": "4 years"
+    }
+  ],
+  "Portfolio": [
+    {
+      "id": "port-001",
+      "title": "some comment",
+      "path": "/",
+      "descript": "something",
+      "url": "..."
+    }
+  ],
+  "Social": [
+    {
+      "code": "001",
+      "name": "phone",
+      "detail": "098-746-6889"
+    },
+    {
+      "code": "002",
+      "name": "email",
+      "detail": "jnop.ch@gmail.com"
+    },
+    {
+      "code": "003",
+      "name": "Linkedin",
+      "detail": ""
+    },
+    {
+      "code": "004",
+      "name": "Github",
+      "detail": ""
+    }
+  ]
+}

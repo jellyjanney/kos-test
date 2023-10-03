@@ -1,0 +1,280 @@
+#home {
+        width: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+        position: relative;
+
+        .row {
+                min-width: 1140px;
+                width: 100%;
+                height: auto;
+                border: 0 solid $color_black;
+                border-radius: 0;
+                background-color: transparentize($color: $color_caramel, $amount: 1);
+                padding: 0;
+                box-shadow: 0px 0 0 transparentize($color: $color_caramel, $amount: 0.5);
+                flex-direction: row-reverse;
+                justify-content: space-between;
+        }
+
+        .hero {
+                min-width: 100%;
+                width: 100%;
+                height: 100vh;
+                border: 0 solid $color_black;
+                border-radius: 0;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: relative;
+
+                &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 35%;
+                        background: transparent linear-gradient(0deg, $color_black 0%, transparentize($color: $color_black, $amount: 1) 100%);
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                }
+
+                img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: cover;
+                        filter: brightness(0.75);
+                }
+
+                figcaption {
+                        width: 50%;
+                        height: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: baseline;
+                        align-content: flex-end;
+                        padding: 2rem 32px 6rem;
+                        z-index: 1;
+                        position: absolute;
+                        // top: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        .caption {
+                                display: flex;
+                                flex-wrap: wrap;
+                                flex-direction: column;
+                                justify-content: baseline;
+                                gap: 8px 0;
+
+                                &--title {
+                                        font: {
+                                                family: $font_title;
+                                                size: $h1-font-size;
+                                                weight: 900;
+                                        }
+
+                                        ;
+                                        line-height: 1.1;
+                                        letter-spacing: 1.5px;
+                                        color: $color_title;
+                                        width: 100%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        flex-direction: row;
+                                        backdrop-filter: drop-shadow(0px 0px 16px $color_black);
+                                        text-shadow: 0px 0px 16px $color_dark;
+
+                                        margin: {
+                                                bottom: $font-size-base;
+                                        }
+
+                                        ;
+                                }
+
+                                &--subtitle {
+                                        font: {
+                                                family: $font_title;
+                                                size: $font-size-base;
+                                                weight: 600;
+                                        }
+
+                                        ;
+                                        line-height: 1.2;
+                                        letter-spacing: 1.5px;
+                                        text-transform: uppercase;
+                                        color: lighten($color: $color_caramel, $amount: 100%);
+                                        width: 55%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        padding: 4px 0 4px;
+                                        backdrop-filter: drop-shadow(0px 0px 16px $color_black);
+                                        text-shadow: 0px 0px 16px $color_dark;
+                                        // background-color: $color_caramel;
+
+                                        &__introduct {
+                                                list-style: none;
+                                                margin: 0;
+                                                padding: 0;
+                                                display: flex;
+                                                flex: 1 1 100%;
+                                                flex-wrap: wrap;
+                                                width: 100%;
+                                                align-items: center;
+                                                justify-content: flex-start;
+                                                backdrop-filter: drop-shadow(0px 0px 16px $color_black);
+                                                text-shadow: 0px 0px 16px $color_dark;
+
+                                                & > li {
+                                                        @extend .caption--subtitle;
+                                                        display: inline-flex;
+                                                        font-size: 14px;
+                                                        font-weight: 400;
+                                                        width: auto;
+                                                        margin: 0 0 0 0.25rem;
+                                                        align-items: center;
+
+                                                        &:not(:first-child) {
+                                                                &::before {
+                                                                        content: "";
+                                                                        display: inline-flex;
+                                                                        margin: 0 0.5rem;
+                                                                        width: 6px;
+                                                                        height: 6px;
+                                                                        background-color: $color_light;
+                                                                        border-radius: 100%;
+                                                                }
+
+                                                        }
+                                                }
+                                        }
+                                }
+
+                                &--detail {
+                                        font: {
+                                                family: $font_text;
+                                                size: $font-size-base;
+                                                weight: 400;
+                                        }
+
+                                        ;
+                                        line-height: 1.5;
+                                        color: transparentize($color: $color_gray, $amount: 0);
+                                        width: 80%;
+                                        padding: 4px 0 2px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                }
+
+                                &__social {
+                                        width: 100%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        padding: 0;
+                                        margin: 2rem 0 0;
+
+                                        &-list {
+                                                width: auto;
+                                                height: auto;
+                                                display: inline-flex;
+                                                flex-wrap: wrap;
+                                                margin: 0 0.25rem;
+
+                                                &__btn {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        justify-content: center;
+                                                        align-content: center;
+                                                        align-items: baseline;
+
+                                                        min-width: 150px;
+                                                        height: 52px;
+                                                        border: 0 solid;
+                                                        background-color: $color_black;
+                                                        border-color: $color_black;
+                                                        border-radius: 50px;
+                                                        padding: 0.925rem 1.5rem;
+                                                        color: $color_white;
+                                                        transition: all 0.1s ease;
+
+                                                        svg {
+                                                                $width: $font_text;
+
+                                                                width: $width;
+                                                                height: $width;
+                                                                margin-right: 0.5rem;
+                                                        }
+
+                                                        &--primary {
+                                                                $fouth: darken($primary, 20%);
+
+                                                                @extend .caption__social-list__btn;
+                                                                background: linear-gradient(0deg, $primary 0%, $fouth 100%);
+                                                                border-color: $color_red;
+
+                                                                &:hover,
+                                                                &:active,
+                                                                &:focus {
+                                                                        background: darken($primary, 50%) !important;
+                                                                        border-color: darken($primary, 50%) !important;
+                                                                }
+                                                        }
+                                                }
+
+                                                &:first-child {
+                                                        margin: {
+                                                                left: 0;
+                                                        }
+
+                                                        ;
+                                                }
+
+                                                &:last-child {
+                                                        margin: {
+                                                                right: 0;
+                                                        }
+
+                                                        ;
+                                                }
+
+                                                &:hover {
+                                                        .caption__social-list__btn {
+                                                                background-color: $primary;
+                                                                border-color: $primary;
+                                                                color: $color_white;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+
+                }
+        }
+
+        .title {
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                padding: 0 16px 0;
+                align-items: center;
+
+                &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 3px;
+                        height: $h2-font-size;
+                        background-color: $color_white;
+                        margin: 0 1.5rem;
+                }
+        }
+
+}
