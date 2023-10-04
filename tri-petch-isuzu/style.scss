@@ -106,43 +106,27 @@ img {
 
                 &-md {
 
-                        @media only screen and (max-width:1024.99px) {
+                        display: none !important;
+
+                        @media only screen and (max-width:1024.99px) and (min-width: 600px) {
                                 display: inline-block !important;
-                        }
-
-                        @media only screen and (max-width:599.99px) {
-                                display: none !important;
-                        }
-
-                        @media only screen and (min-width:1025px) {
-                                display: none !important;
                         }
                 }
 
                 &-sm {
 
-                        @media only screen and (max-width:1024.99px) {
-                                display: none !important;
-                        }
+                        display: none !important;
 
-                        @media only screen and (max-width:599.99px) {
+                        @media only screen and (max-width:599.99px) and (min-width: 0px) {
                                 display: inline-block !important;
                         }
 
-                        @media only screen and (min-width:1025px) {
-                                display: none !important;
-                        }
                 }
 
                 &-lg {
 
-                        @media only screen and (max-width:1024.99px) {
-                                display: none !important;
-                        }
 
-                        @media only screen and (max-width:599.99px) {
-                                display: none !important;
-                        }
+                        display: none !important;
 
                         @media only screen and (min-width:1025px) {
                                 display: inline-block !important;
@@ -351,6 +335,10 @@ section {
                                 }
                         }
                 }
+
+                @media only screen and (min-width: 600px) {
+                        display: block !important;
+                }
         }
 
         .flex-md-row-reverse {
@@ -387,6 +375,15 @@ section {
                                         transform: scale(1);
                                 }
                         }
+
+                        @media only screen and (min-width:1025px) {
+                                margin: 75px 0 0;
+                                padding: 45px 0 0;
+
+                                img {
+                                        transform: scale(1.5);
+                                }
+                        }
                 }
 
                 .figcaption {
@@ -407,6 +404,10 @@ section {
 
                                 ;
                         }
+
+                        @media only screen and (min-width: 600px) {
+                                display: block !important;
+                        }
                 }
 
 
@@ -418,7 +419,7 @@ section {
                                         }
 
                                         h3 {
-                                                span::after {
+                                                span {
                                                         color: $color_1;
                                                 }
                                         }
@@ -432,56 +433,39 @@ section {
 }
 
 .show {
-
-
         &-sm {
+                display: none !important;
 
-                @media only screen and (max-width:1024.99px) {
-                        display: none !important;
-                }
-
-                @media only screen and (max-width:599.99px) {
+                @media only screen and (max-width:599.99px) and (min-width: 0px) {
                         display: inline-block !important;
                 }
 
-                @media only screen and (min-width:1025px) {
-                        display: none !important;
+        }
+
+        &-md {
+                display: none !important;
+
+                @media only screen and (max-width:1024.99px) and (min-width: 600px) {
+                        display: inline-block !important;
                 }
+
         }
 
         &-lg {
 
-                @media only screen and (max-width:1024.99px) {
-                        display: none !important;
-                }
-
-                @media only screen and (max-width:599.99px) {
-                        display: none !important;
-                }
+                display: none !important;
 
                 @media only screen and (min-width:1025px) {
                         display: inline-block !important;
-                }
-        }
-
-        &-md {
-
-                @media only screen and (max-width:1024.99px) {
-                        display: inline-block !important;
-                }
-
-                @media only screen and (max-width:599.99px) {
-                        display: none !important;
-                }
-
-                @media only screen and (min-width:1025px) {
-                        display: none !important;
                 }
         }
 }
 
 .carousel {
+        display: none;
+
         @media only screen and (max-width:599.99px) {
+                display: block;
                 padding: 0;
 
                 &-item {
