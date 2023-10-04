@@ -323,7 +323,8 @@ section .flex-md-row-reverse ul > li:last-child h3 span {
   }
   .carousel-item {
     padding-top: 79px;
-    min-height: 284px;
+    min-height: 82vw;
+    user-select: none;
   }
   .carousel-item h3 {
     margin-bottom: 20px;
