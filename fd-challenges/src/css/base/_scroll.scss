@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+        width: 5px;
+
+        &-track {
+                background-color: $color_dark;
+        }
+
+        &-thumb {
+                background-color: $color_caramel;
+
+                &:hover {
+                        background-color: $color_yellow;
+                }
+
+                &:active,
+                &:focus {
+                        background-color: $primary;
+                }
+        }
+}

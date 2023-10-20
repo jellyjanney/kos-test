@@ -1,15 +1,33 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
+import { Menu, MenuItem, MenuButton, SubMenu } from "@szhsin/react-menu";
+import "@szhsin/react-menu/dist/index.css";
 // import { Link } from "react-router-dom";
 
-class Header extends Component {
-    constructor(props){
-        super(props);
-    }
+const Header = () => {
+    const [sticky, setSticky] = useState("");
+
+    // on render, set listener
+    useEffect(() => {
+        window.addEventListener("scroll", isSticky);
+        return () => {
+            window.removeEventListener("scroll", isSticky);
+        };
+    }, []);
+
+    const isSticky = () => {
+        /* Method that will fix header after a specific scrollable */
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 250 ? "is-sticky" : "";
+        setSticky(stickyClass);
+    };
     
-    render(){
-        return (
-            <header>
-                <nav>
+    const classes = `header-section ${sticky}`;
+    
+
+    return (
+        <>
+            <header className={classes}>
+                <nav className="header">
                     <button className="brand">
                         <img src="/images/about-me/logo-1.png" alt="JANNEY's Portfolio" className="brand-logo" />
                     </button>
@@ -41,26 +59,20 @@ class Header extends Component {
                         </li>
                     </ul>
                     
-                    <ul className="menu-right dropdown">
-                        <li className="menu-right__list dropdown-toggle" id="aboutme" data-bs-toggle="dropdown" aria-expanded="false">
-                            <button className="menu-right__btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                                </svg>
-                            </button>
-                            
-                            <ul className="dropdown-menu" aria-labelledby="aboutme">
-                                <li><a className="dropdown-item" href="#">About Me</a></li>
-                                <li><a className="dropdown-item" href="#">My Skill</a></li>
-                                <li><a className="dropdown-item" href="#">Contact Me</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <Menu menuButton={<MenuButton>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg>
+                    </MenuButton>}>
+                        <MenuItem>About Me</MenuItem>
+                        <MenuItem>My Skill</MenuItem>
+                        <MenuItem>Contact me</MenuItem>
+                    </Menu>
                 </nav>
             </header>
-        );    
-    }
-}
+        </>
+    );
+};
 
 export default Header;

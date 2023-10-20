@@ -1,0 +1,218 @@
+.contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 0 0;
+        margin-top: -1rem;
+
+        h5 {
+                color: $color_cream;
+                letter-spacing: 1.5px;
+                margin: 0 1rem 1.5rem;
+        }
+
+        .contact-list {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+
+                list-style: none;
+                padding: 0 1rem;
+                gap: 2px;
+                max-width: 45%;
+
+                .myinfo {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        list-style: none;
+                        padding: 0;
+                        gap: 2px;
+
+                        & > li {
+                                display: flex;
+                                flex-wrap: wrap;
+                                padding: 0 1rem;
+                                justify-content: left;
+                                align-items: flex-start;
+                                width: 100%;
+
+                                .svg_icon {
+                                        $width: 48px;
+
+                                        content: "";
+                                        display: inline-flex;
+                                        width: $width;
+                                        height: $width;
+                                        background-color: $primary;
+                                        border: 1px solid $primary;
+                                        border-radius: 100%;
+
+                                        margin: {
+                                                top: 0.25rem;
+                                                right: 1rem;
+                                        }
+
+                                        ;
+                                        padding: 0.5rem;
+
+                                        svg {
+                                                color: $color_dark;
+                                                width: 100%;
+                                                height: 100%;
+                                        }
+                                }
+
+
+                                h3 {
+                                        font: {
+                                                family: $font_text;
+                                                size: 20px;
+                                        }
+
+                                        ;
+                                        line-height: 1.5;
+                                        margin: 0;
+                                        color: $color_white;
+                                }
+
+                                label {
+                                        color: $color_caramel;
+                                        letter-spacing: 5.55px;
+                                        text-transform: uppercase;
+                                }
+
+                                &:not(:first-child) {
+                                        margin: 1rem 0 0;
+                                }
+
+                                a {
+                                        display: inline-flex;
+                                        flex-wrap: wrap;
+                                        text-decoration: none;
+                                        width: calc(100% - 65px);
+
+                                        &:active,
+                                        &:focus,
+                                        &:hover {
+                                                h3 {
+                                                        color: $primary;
+                                                }
+                                        }
+
+                                }
+
+                                &:hover {
+                                        .svg_icon {
+                                                box-shadow: 0 0 16px 0 transparentize($color: $primary, $amount: 0.5);
+                                        }
+                                }
+                        }
+                }
+
+                .social {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        list-style: none;
+                        padding: 0;
+                        gap: 2px;
+                        width: 100%;
+                        margin: 0 0.5rem;
+
+                        & > li {
+                                $width: 52px;
+
+                                display: flex;
+                                flex-wrap: wrap;
+                                padding: 0;
+                                justify-content: center;
+                                align-items: center;
+                                width: $width;
+                                height: $width;
+                                margin: 0.5rem;
+                                border-radius: 100%;
+                                background-color: $primary;
+
+                                .svg_icon {
+                                        content: "";
+                                        display: inline-flex;
+                                        width: $width;
+                                        height: $width;
+                                        border: 1px solid $primary;
+                                        border-radius: 100%;
+
+                                        margin: 0 0;
+                                        padding: 0.725rem;
+
+                                        svg {
+                                                color: $color_dark;
+                                                width: 100%;
+                                                height: 100%;
+                                        }
+                                }
+
+                                a {
+                                        display: inline-flex;
+                                        flex-wrap: wrap;
+                                        text-decoration: none;
+                                        width: 100%;
+                                        height: 100%;
+                                        justify-content: center;
+                                        align-items: center;
+                                        color: $primary;
+                                        padding: 0;
+                                        cursor: pointer;
+
+                                        svg {
+                                                color: $primary;
+                                                width: 100%;
+                                                height: 100%;
+                                        }
+
+                                        &:active,
+                                        &:focus,
+                                        &:hover {
+                                                h3 {
+                                                        color: $primary;
+                                                }
+                                        }
+
+                                }
+
+                                &:hover {
+                                        box-shadow: 0 0 16px 0 transparentize($color: $primary, $amount: 0.5);
+                                }
+                        }
+                }
+
+                .caption__social {
+                        padding: 0 1rem;
+                }
+        }
+
+        .me {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+
+                list-style: none;
+                padding: 0;
+                max-width: 55%;
+                width: 100%;
+
+                border-radius: 1rem;
+                overflow: hidden;
+        }
+
+}

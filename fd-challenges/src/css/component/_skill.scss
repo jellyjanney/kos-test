@@ -1,0 +1,65 @@
+.progressbar {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 1rem 0 !important;
+        margin: 0;
+
+        & > li {
+                padding: 0 0.5rem;
+                margin: 0;
+
+                label {
+                        display: block;
+                        margin: 0 0 0.25rem;
+
+                        font: {
+                                family: $font_text;
+                                size: 1rem;
+                        }
+
+                        ;
+
+                }
+
+                .progress {
+                        display: flex;
+                        width: 100%;
+                        height: 16px;
+                        border: 1px solid $color_white;
+                        border-radius: 100px;
+                        overflow: hidden;
+                        box-shadow: inset 0 0 8px transparentize($color: $color_dark, $amount: 0.29);
+
+                        &-bar {
+                                display: inline-flex;
+                                height: 100%;
+                                // background-color: $color_red;
+                                border-radius: 6px;
+                                // overflow: hidden;
+
+                                font: {
+                                        family: $font_text;
+                                        size: $small-font-size;
+                                }
+
+                                ;
+                                letter-spacing: 2px;
+                                line-height: 2;
+                                box-shadow: inset 0 0 8px transparentize($color: $color_dark, $amount: 0.29);
+                        }
+
+                        &:nth-child(odd) {
+                                .progress-bar {
+                                        background-color: $color_red;
+                                }
+                        }
+
+                        &:nth-child(even) {
+                                .progress-bar {
+                                        background-color: $color_blue;
+                                }
+                        }
+                }
+        }
+}

@@ -1,4 +1,4 @@
-import './css/main.css';
+// import '../public/styles/main.css';
 import React, { Component } from "react";
 import Header from "./layout/Header";
 import Home from "./container/Home";

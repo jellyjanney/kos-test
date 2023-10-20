@@ -8,18 +8,15 @@ header {
     max-height: unset;
     padding: 0 $padding-base;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     // transform: translate(-15%, -50%);
     z-index: $zindex-menu;
     background-color: transparentize($color: $color_black, $amount: 1);
     overflow: visible;
-
-    border: {
-        bottom: 1px solid $color_gray-light;
-    }
-
-    ;
+    box-shadow: 0 0 1px $color_gray-light;
+    transition: all 0.3m ease-in-out;
 
     nav {
         padding: 0;
@@ -42,6 +39,8 @@ header {
         display: inline-flex;
         overflow: hidden;
         padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
 
         &-logo {
             display: block;
@@ -60,11 +59,11 @@ header {
         display: inline-flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
         &-list {
-            margin: 0 0.5rem;
+            margin: 0 0;
             padding: 0;
             cursor: pointer;
             display: inline-flex;
@@ -81,7 +80,7 @@ header {
             position: relative;
 
             &__btn {
-                display: block;
+                display: flex;
 
                 flex: {
                     wrap: wrap;
@@ -93,20 +92,19 @@ header {
                 text-align: center;
 
                 color: $color_gray;
-                text-shadow: 0px 0px 8px $color_dark;
+                text-shadow: 0px 0px 16px $color_black;
                 font-weight: 600;
                 font-size: $font-size-base;
                 line-height: 1.4;
                 margin: 0;
                 text-transform: uppercase;
-                transition: all 0.3ms ease;
                 background-color: transparent;
+                border: none;
                 border-radius: $radius-pill;
                 min-width: 52px;
                 height: 52px;
-                border: 0 solid;
                 padding: 1rem;
-                transition: all 0.3ms ease-in-out;
+                transition: all 0.3s ease-in-out;
                 opacity: 1;
 
                 svg {
@@ -114,21 +112,21 @@ header {
                     height: 100%;
                 }
 
+                &::before {
+                    content: "#";
+                    display: inline-flex;
+                    margin: 0 0;
+                    font-size: $font-size-base;
+                    opacity: 0;
+                }
+
                 &::after {
                     content: "";
-                    width: 6px;
-                    height: 6px;
-                    background-color: $primary;
-                    border-radius: 100%;
-                    display: none;
-                    margin: 0.5rem auto 0;
-                    box-shadow: 0px 0px 8px $color_dark;
-
-                    // position: absolute;
-                    // top: 60%;
-                    // left: 90%;
-                    // transform: rotate(45deg) translate(-50%, -50%);
-                    // z-index: -1;
+                    display: inline-flex;
+                    width: 2px;
+                    margin: 0 0.5rem;
+                    font-size: $font-size-base;
+                    opacity: 0;
                 }
             }
 
@@ -136,13 +134,15 @@ header {
                 .menu-list__btn {
                     // background-color: $color_black;
                     opacity: 1;
+                    letter-spacing: 1.5px;
 
                     * {
                         color: $color_white;
                     }
 
-                    &::after {
-                        display: flex;
+                    &::after,
+                    &::before {
+                        opacity: 1;
                     }
                 }
             }
@@ -151,23 +151,31 @@ header {
                 .menu-list__btn {
                     // background-color: $primary;
                     opacity: 1;
+                    letter-spacing: 1.5px;
+                    color: $primary;
 
                     * {
-                        color: $color_white;
+                        color: $primary;
                     }
 
-                    &::after {
-                        display: flex;
+                    &::after,
+                    &::before {
+                        opacity: 1;
                     }
                 }
 
                 &:hover {
                     .menu-list__btn {
-                        // background-color: $color_dark;
+                        color: $color_caramel;
 
-                        &::after {
-                            display: flex;
-                            background-color: $primary
+                        border: {
+                            color: $color_caramel;
+                        }
+
+                        &::after,
+                        &::before {
+                            opacity: 1;
+                            color: $color_caramel;
                         }
                     }
                 }
@@ -175,20 +183,14 @@ header {
         }
     }
 
-    .menu-right {
-        padding: 0;
-        margin: 1rem 0;
-        width: auto;
-
-        list-style: none;
-        display: inline-flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-
-        &__btn {
-            display: block;
+    .szh-menu {
+        &-button {
+            list-style: none;
+            display: inline-flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
 
             flex: {
                 wrap: wrap;
@@ -203,7 +205,7 @@ header {
             font-weight: 600;
             font-size: 14px;
             line-height: 1.4;
-            margin: 0;
+            margin: 1rem 0;
             text-transform: uppercase;
             transition: all 0.3ms ease;
             background-color: transparent;
@@ -221,120 +223,137 @@ header {
             }
         }
 
-        &__list {
-            margin: 0 0.5rem;
-            padding: 0;
-            cursor: pointer;
-            display: inline-flex;
+        margin: 0 0.5rem;
+        padding: 0;
+        cursor: pointer;
+        display: inline-flex;
 
-            flex: {
-                wrap: wrap;
+        flex: {
+            wrap: wrap;
+            direction: column;
+        }
+
+        ;
+        justify-content: center;
+        align-items: self-start;
+        transition: all 0.3ms ease-in-out;
+        background-color: transparentize($color: $color_black, $amount: 0.29);
+        padding: 0;
+        border-radius: 0.5rem;
+        // overflow: hidden;
+
+        margin: {
+            top: 2rem;
+            right: 16px;
+        }
+
+        ;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            right: 16%;
+
+            margin: {
+                left: auto;
+                right: 0;
             }
 
             ;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3ms ease-in-out;
-            overflow: visible;
-            position: relative;
+            // background-color: transparentize($color: $color_black, $amount: 0.5);
+            transform: translate(-50%, -100%);
 
-            &:hover {
-                .menu-right__btn {
-                    opacity: 1;
+            border: {
+                bottom: 16px solid transparentize($color: $color_black, $amount: 0.5);
+                left: 16px solid transparent;
+                right: 16px solid transparent;
+            }
+
+            ;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: transparentize($color: $primary, $amount: 0);
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            color: transparentize($color: $color_gray, $amount: 0);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 0.25rem 1rem;
+            text-transform: uppercase;
+            transition: all 0.3ms ease;
+            text-align: left;
+            justify-content: start;
+            align-items: center;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: transparentize($color: $primary, $amount: 0);
+                background-color: unset;
+            }
+        }
+    }
+
+    .header {
+        &-sticky {
+            position: fixed;
+            top: 0;
+            transform: translateY(-100%);
+        }
+    }
+
+    &.is-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: $zindex-fixed;
+        box-shadow: 0 2px 24px 0 transparentize($color: $color_gray-light, $amount: 0.85);
+        background-color: transparentize($color: $color_black, $amount: 0.5) !important;
+        animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-bottom: 0;
+
+        .brand {
+            height: 65px;
+        }
+
+        .menu {
+            margin: 0;
+
+            &-right {
+                margin: 0;
+            }
+        }
+
+        .szh-menu {
+            background-color: transparentize($color: $color_white, $amount: 0.25);
+
+            &::before {
+                border: {
+                    bottom: 16px solid transparentize($color: $color_white, $amount: 0.25);
+                    left: 16px solid transparent;
+                    right: 16px solid transparent;
                 }
             }
 
-            &.show {
-                display: flex;
-                flex-wrap: wrap;
-                position: relative;
-
-                .dropdown {
-                    &-menu {
-                        position: absolute;
-                        top: 100%;
-                        right: 0;
-                        background-color: transparentize($color: $color_black, $amount: 0.5);
-                        padding: 0;
-                        border-radius: 0;
-                        // overflow: hidden;
-
-                        margin: {
-                            top: 2rem;
-                        }
-
-                        ;
-
-                        &::before {
-                            content: "";
-                            display: block;
-                            width: 16px;
-                            height: 16px;
-                            position: absolute;
-                            top: 0;
-                            right: 8px;
-
-                            margin: {
-                                left: auto;
-                                right: 0;
-                            }
-
-                            ;
-                            // background-color: transparentize($color: $color_black, $amount: 0.5);
-                            transform: translate(-50%, -100%);
-
-                            border: {
-                                bottom: 16px solid transparentize($color: $color_black, $amount: 0.5);
-                                left: 16px solid transparent;
-                                right: 16px solid transparent;
-                            }
-
-                            ;
-                        }
-
-                        &.show {
-                            display: flex;
-                            flex: 1 1 100%;
-                            flex-wrap: wrap;
-                            flex-direction: column;
-                        }
-
-                        & > li {
-                            padding: 0;
-                            margin: 0;
-
-                            &:not(:first-child) {
-                                border: {
-                                    top: 2px solid $color_red;
-                                }
-
-                                ;
-                            }
-                        }
-                    }
-
-
-                    &-item {
-                        display: flex;
-                        flex-wrap: wrap;
-                        position: relative;
-                        color: transparentize($color: $color_gray, $amount: 0);
-                        font-weight: 600;
-                        font-size: 14px;
-                        line-height: 1.4;
-                        margin: 0;
-                        padding: 0.25rem 1rem;
-                        text-transform: uppercase;
-                        transition: all 0.3ms ease;
-
-                        &:hover,
-                        &:active,
-                        &:focus {
-                            color: transparentize($color: $color_white, $amount: 0);
-                            background-color: unset;
-                        }
-                    }
-                }
+            &__item {
+                color: $color_dark;
             }
         }
     }

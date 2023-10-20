@@ -55,7 +55,7 @@ h5 {
     @extend %heading;
 
     font: {
-        family: 'title-600';
+        family: $font_title;
         size: $h5-font-size;
     }
 }
@@ -92,4 +92,63 @@ small {
 
     ;
     color: $color_text;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 0 1rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 0.5rem;
+
+    &::before {
+        content: "";
+        display: inline-flex;
+        width: $h1-font-size;
+        height: 2px;
+        background: $color_white linear-gradient(90deg, $color_black 0%, $color_cream 100%);
+        margin: 0 1.5rem;
+        border-radius: 50px;
+
+        // animation: top-n-down 1s infinite;
+    }
+
+    &::after {
+        content: "";
+        display: inline-flex;
+        width: $h1-font-size;
+        height: 2px;
+        background: $color_white linear-gradient(-90deg, $color_black 0%, $color_cream 100%);
+        margin: 0 1.5rem;
+        border-radius: 50px;
+
+        // animation: top-n-down 1s infinite;
+    }
+}
+
+.subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 0 16px 0;
+    align-items: center;
+
+    font: {
+        family: $font_title;
+    }
+
+    ;
+}
+
+.text {
+    &-start {
+        justify-content: start;
+    }
+
+    &-end {
+        justify-content: end;
+    }
 }
