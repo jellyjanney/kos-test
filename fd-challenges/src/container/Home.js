@@ -63,16 +63,13 @@ class Home extends Component {
                                 </section>
                                 <section role="main" className="container">
                                         <div className="row">
-                                                <h2 className="title">Portfolio</h2>
+                                                <h2 className="title mt-4">Portfolio</h2>
                                                 <Slide />
                                                 
-                                                
+                                                <h2 className="title mt-4">About Me</h2>
                                                 <Skills />
                                                 
-                                                <h2 className="title">About Me</h2>
-                                                <About />
-                                                
-                                                <h2 className="title">Ready to Craft Web Wonders</h2>
+                                                <h2 className="title mt-4">Ready to Craft Web Wonders</h2>
                                         </div>
                                 </section>
                                 <section className="container-fluid">

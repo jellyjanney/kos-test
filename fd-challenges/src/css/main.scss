@@ -1,8 +1,11 @@
-@import
-    "./abstacts.scss",
-    "./base.scss",
-    "./components.scss",
-    "./layout.scss",
-    "./pages.scss",
-    "./themes.scss"
+@import "./abstacts.scss",
+"./base.scss",
+"./components.scss",
+"./layout.scss",
+"./pages.scss",
+"./themes.scss"
 ;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

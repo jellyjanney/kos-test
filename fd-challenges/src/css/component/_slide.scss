@@ -12,7 +12,7 @@
                 display: inline-flex;
                 width: 100%;
                 max-width: calc(100% / 6);
-                min-width: 313px;
+                min-width: 270px;
                 gap: 8px;
                 border-radius: 1rem;
                 overflow: hidden;
@@ -57,14 +57,15 @@
                         figcaption {
                                 display: block;
                                 width: 100%;
-                                padding: 1rem 1rem 0;
+                                padding: 1rem 0 0;
 
                                 h4 {
                                         font-family: $font-title;
                                         font-size: $h5-font-size;
-                                        font-weight: 500;
+                                        font-weight: 700;
                                         margin: 0 0 8px;
                                         cursor: pointer;
+                                        letter-spacing: 0.75px;
                                 }
 
                                 a {
@@ -95,7 +96,7 @@
                                         gap: 4px;
 
                                         label {
-                                                $fouth: darken($primary, 20%);
+                                                $fouth: darken($color_rose, 20%);
 
                                                 font-size: $small-font-size;
                                                 color: $color_white;
@@ -106,7 +107,7 @@
                                                 background: linear-gradient(0deg, $primary 0%, $fouth 100%);
 
                                                 &.st {
-                                                        $primary: $primary;
+                                                        $primary: $color_orange;
                                                         $fouth: darken($primary, 20%);
 
                                                         background: linear-gradient(0deg, $primary 0%, $fouth 100%);
@@ -114,7 +115,7 @@
                                                 }
 
                                                 &.nd {
-                                                        $primary: $color_green;
+                                                        $primary: $color_blue;
                                                         $fouth: darken($primary, 20%);
 
                                                         background: linear-gradient(0deg, $primary 0%, $fouth 100%);
@@ -122,7 +123,7 @@
                                                 }
 
                                                 &.th {
-                                                        $primary: $color_orange;
+                                                        $primary: $color_skylight;
                                                         $fouth: darken($primary, 20%);
 
                                                         background: linear-gradient(0deg, $primary 0%, $fouth 100%);
@@ -136,7 +137,7 @@
                 &:hover,
                 &:active,
                 &:focus {
-                        background-color: $color_dark;
+                        //background-color: $color_dark;
 
                         figure {
                                 border-radius: 1rem 1rem 0 0;

@@ -4,7 +4,7 @@ class Contact extends Component {
         render() {
                 return(
                         <>
-                                <div className="contact">
+                                <div id="contact" className="contact">
                                         <div className="me">
                                                <img src="/images/about-me/iam-2.JPG" alt="Darunee Praditwong" />
                                         </div>
@@ -41,7 +41,7 @@ class Contact extends Component {
                                                                 </span>
                                                                 <a href="#">
                                                                         <h3>jnop.ch@gmail.com</h3>
-                                                                        <label>Email</label>
+                                                                        <label clas>Email</label>
                                                                 </a>
                                                         </li>
                                                         <li>
@@ -94,7 +94,7 @@ class Contact extends Component {
                                                                 </a>
                                                         </li>
                                                 </ul> 
-                                                <ul className="caption__social">
+                                                <ul className="caption__social mb-3 mt-2">
                                                         <li className="caption__social-list">
                                                                 <button className="caption__social-list__btn--primary">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">

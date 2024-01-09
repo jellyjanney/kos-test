@@ -29,7 +29,7 @@ const Header = () => {
             <header className={classes}>
                 <nav className="header">
                     <button className="brand">
-                        <img src="/images/about-me/logo-1.png" alt="JANNEY's Portfolio" className="brand-logo" />
+                        <img src="/images/about-me/logo.png" alt="JANNEY's Portfolio" className="brand-logo" />
                     </button>
                     <ul className="menu">
                         <li className="menu-list active">

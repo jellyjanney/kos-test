@@ -10,6 +10,7 @@
     "axios": "^1.5.0",
     "bootstrap": "^5.3.1",
     "bootstrap-sass": "^3.4.3",
+    "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-bootstrap-submenu": "^3.0.3",
     "react-dom": "^18.2.0",
@@ -43,8 +44,10 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
   "keywords": [],
-  "author": "Jellyjanney",
+  "author": "Jelly JANNEY.",
   "license": "ISC"
 }
